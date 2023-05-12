@@ -5,8 +5,8 @@ module.exports = {
     es2021: true
   },
   extends: 'eslint:recommended',
-  overrides: [
-  ],
+  plugins: ['html'],
+  overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module'
