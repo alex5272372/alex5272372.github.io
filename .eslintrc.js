@@ -29,6 +29,8 @@ module.exports = {
     'eol-last': 'error',
     'comma-spacing': ['error', { 'before': false, 'after': true }],
     'array-bracket-spacing': ['error', 'never'],
-    'object-curly-spacing': ['error', 'always', { 'arraysInObjects': true, 'objectsInObjects': false }]
+    'object-curly-spacing': ['error', 'always', { 'arraysInObjects': true, 'objectsInObjects': false }],
+
+    '@html-eslint/indent': ['error', 2]
   }
 }
