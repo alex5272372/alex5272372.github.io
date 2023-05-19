@@ -3,8 +3,6 @@ name: NodeJS with Webpack
 on:
   push:
     branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
   build:
@@ -26,3 +24,8 @@ jobs:
       run: |
         npm install
         npm run build
+
+    - name: Upload GitHub Pages artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: "dist/"
