@@ -42,6 +42,15 @@ module.exports = {
             loader: 'sass-loader'
           }
         ]
+      },
+      {
+        test: /\.html$/i,
+        use: 'html-loader'
+      },
+      {
+        test: /\.(png|jpg)$/i,
+        type: 'asset/resource',
+        generator: { filename: 'img/[name]-[hash][ext]' }
       }
     ]
   }
