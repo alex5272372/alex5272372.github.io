@@ -47,6 +47,7 @@ module.exports = {
         test: /\.html$/i,
         loader: 'html-loader',
         options: { sources: { list: [
+          '...',
           {
             tag: 'a',
             attribute: 'href',
