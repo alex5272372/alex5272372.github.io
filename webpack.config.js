@@ -45,12 +45,31 @@ module.exports = {
       },
       {
         test: /\.html$/i,
-        use: 'html-loader'
+        loader: 'html-loader',
+        options: { sources: { list: [
+          {
+            tag: 'a',
+            attribute: 'href',
+            type: 'src',
+            filter: (tag, attribute, attributes) =>
+              /\.(pdf)$/i.test(attributes.find(el => el.name === 'href').value)
+          }
+        ] }}
       },
       {
         test: /\.(png|jpg)$/i,
         type: 'asset/resource',
         generator: { filename: 'img/[name]-[hash][ext]' }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: { filename: '[name]-[hash][ext]' }
+      },
+      {
+        test: /\.(pdf)$/i,
+        type: 'asset/resource',
+        generator: { filename: '[name]-[hash][ext]' }
       }
     ]
   }

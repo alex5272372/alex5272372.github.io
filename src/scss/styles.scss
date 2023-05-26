@@ -10,7 +10,11 @@ $headings-color: $dark;
 $display1-size: 10rem;
 $enable-responsive-font-sizes: true;
 
+$fa-font-path: "../assets/webfonts";
+
 @import "bootstrap/scss/bootstrap";
+@import "./fontawesome/fontawesome.scss";
+@import "./fontawesome/regular.scss";
 
 /********** Template CSS ************/
 h1,
