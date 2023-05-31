@@ -8,18 +8,30 @@ import $ from 'jquery'
 import Typed from 'typed.js'
 
 const main = () => {
-  // Navbar on scrolling
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 200) {
+  $(window).on('scroll', () => {
+    const top = $(window).scrollTop()
+
+    if (top > 100) {
+      $('.scroll-to-bottom').fadeOut('slow')
+      $('.back-to-top').fadeIn('slow')
       $('.navbar').fadeIn('slow').css('display', 'flex')
     } else {
+      $('.scroll-to-bottom').fadeIn('slow')
+      $('.back-to-top').fadeOut('slow')
       $('.navbar').fadeOut('slow').css('display', 'none')
+    }
+
+    // Skills
+    if (top > 2000) {
+      $('.progress .progress-bar').each(function () {
+        $(this).css('width', $(this).attr('aria-valuenow') + '%')
+      })
     }
   })
 
 
   // Smooth scrolling on the navbar links
-  $('.navbar-nav a').on('click', function (event) {
+  $('.navbar-nav a').on('click', event => {
     if (this.hash !== '') {
       event.preventDefault()
 
@@ -47,40 +59,20 @@ const main = () => {
   }
 
   // Modal Video
-  $(document).ready(function () {
-    var $videoSrc
-    $('.btn-play').click(function () {
-      $videoSrc = $(this).data('src')
-    })
+  let $videoSrc
+  $('.btn-play').on('click', () => {
+    $videoSrc = $('.btn-play').data('src')
     console.log($videoSrc)
-
-    $('#videoModal').on('shown.bs.modal', function () {
-      $('#video').attr('src', $videoSrc + '?autoplay=1&amp;modestbranding=1&amp;showinfo=0')
-    })
-
-    $('#videoModal').on('hide.bs.modal', function () {
-      $('#video').attr('src', $videoSrc)
-    })
   })
-
-  // Scroll to Bottom
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      $('.scroll-to-bottom').fadeOut('slow')
-    } else {
-      $('.scroll-to-bottom').fadeIn('slow')
-    }
+  $('#videoModal').on('shown.bs.modal', () => {
+    $('#video').attr('src', $videoSrc + '?autoplay=1&amp;modestbranding=1&amp;showinfo=0')
+  })
+  $('#videoModal').on('hide.bs.modal', () => {
+    $('#video').attr('src', $videoSrc)
   })
 
   // Back to top button
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 200) {
-      $('.back-to-top').fadeIn('slow')
-    } else {
-      $('.back-to-top').fadeOut('slow')
-    }
-  })
-  $('.back-to-top').click(function () {
+  $('.back-to-top').on('click', () => {
     $('html, body').animate({ scrollTop: 0 }, 1000, 'linear')
     return false
   })
