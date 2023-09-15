@@ -281,23 +281,3 @@ h6,
 .testimonial-carousel .owl-dot.active {
     background: $primary;
 }
-
-.blog-date {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    top: calc(50% - 30px);
-    left: calc(50% - 30px);
-    border-radius: 60px;
-    background: $primary;
-}
-
-.contact-form .help-block ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
