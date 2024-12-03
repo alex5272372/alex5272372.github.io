@@ -15,6 +15,7 @@ $fa-font-path: "../assets/webfonts";
 @import "bootstrap/scss/bootstrap";
 @import "./fontawesome/fontawesome.scss";
 @import "./fontawesome/solid.scss";
+@import "./fontawesome/brands.scss";
 
 /********** Template CSS ************/
 h1,
@@ -144,7 +145,7 @@ h6,
     border-radius: 100%;
     border: none;
     outline: none !important;
-    padding: 18px 20px 20px 28px;
+    padding: 5px 0px 0px 5px;
 }
 
 .btn-play:before {

@@ -29,7 +29,6 @@ const main = () => {
     }
   })
 
-
   // Smooth scrolling on the navbar links
   $('.navbar-nav a').on('click', event => {
     if (this.hash !== '') {
@@ -57,19 +56,6 @@ const main = () => {
       loop: true
     })
   }
-
-  // Modal Video
-  let $videoSrc
-  $('.btn-play').on('click', () => {
-    $videoSrc = $('.btn-play').data('src')
-    console.log($videoSrc)
-  })
-  $('#videoModal').on('shown.bs.modal', () => {
-    $('#video').attr('src', $videoSrc + '?autoplay=1&amp;modestbranding=1&amp;showinfo=0')
-  })
-  $('#videoModal').on('hide.bs.modal', () => {
-    $('#video').attr('src', $videoSrc)
-  })
 
   // Back to top button
   $('.back-to-top').on('click', () => {
