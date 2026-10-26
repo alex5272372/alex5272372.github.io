@@ -1,4 +1,6 @@
 import '../scss/styles.scss'
+import Collapse from 'bootstrap/js/dist/collapse'
+import ScrollSpy from 'bootstrap/js/dist/scrollspy'
 
 const initTypedText = () => {
   const output = document.querySelector('.typed-text-output')
@@ -41,6 +43,8 @@ const initTypedText = () => {
 
 const main = () => {
   const navbar = document.querySelector('.navbar')
+  const navbarToggler = document.querySelector('.navbar-toggler')
+  const collapseElement = document.querySelector('#navbarCollapse')
   const scrollToBottom = document.querySelector('.scroll-to-bottom')
   const backToTop = document.querySelector('.back-to-top')
   const progressBars = document.querySelectorAll('.progress .progress-bar')
@@ -62,6 +66,8 @@ const main = () => {
   window.addEventListener('scroll', updateScrollState, { passive: true })
   updateScrollState()
 
+  new ScrollSpy(document.body, { target: '.navbar', offset: 51 })
+
   document.querySelectorAll('.navbar-nav a').forEach(link => {
     link.addEventListener('click', event => {
       const target = document.querySelector(link.getAttribute('href'))
@@ -73,10 +79,10 @@ const main = () => {
         behavior: 'smooth'
       })
 
-      document.querySelectorAll('.navbar-nav .active').forEach(activeLink => {
-        activeLink.classList.remove('active')
-      })
-      link.classList.add('active')
+      if (collapseElement?.classList.contains('show')) {
+        Collapse.getOrCreateInstance(collapseElement).hide()
+        navbarToggler?.focus()
+      }
     })
   })
 

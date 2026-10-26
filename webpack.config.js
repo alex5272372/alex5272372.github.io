@@ -63,7 +63,7 @@ module.exports = {
         generator: { filename: 'img/[name]-[hash][ext]' }
       },
       {
-        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        test: /\.(woff2?|otf)$/i,
         type: 'asset/resource',
         generator: { filename: '[name]-[hash][ext]' }
       },
