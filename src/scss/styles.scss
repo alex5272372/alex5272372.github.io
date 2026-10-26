@@ -1,22 +1,20 @@
 /******* Bootstrap Theming ********/
-$primary: #0BCEAF;
-$secondary: #6c757d;
-$light: #ffffff;
-$dark: #343a40;
-$font-family-sans-serif: 'Roboto', sans-serif;
-$body-bg: $light;
-$body-color: $secondary;
-$headings-color: $dark;
-$display1-size: 10rem;
-$enable-responsive-font-sizes: true;
-
-$fa-font-path: "../assets/webfonts";
-
-@import "bootstrap/scss/bootstrap";
-@import "./fontawesome/fontawesome.scss";
-@import "./fontawesome/solid.scss";
-@import "./fontawesome/regular.scss";
-@import "./fontawesome/brands.scss";
+@use "@fortawesome/fontawesome-free/scss/variables" with (
+    $font-path: "../../node_modules/@fortawesome/fontawesome-free/webfonts"
+);
+@use "@fortawesome/fontawesome-free/scss/fontawesome";
+@use "@fortawesome/fontawesome-free/scss/solid";
+@use "@fortawesome/fontawesome-free/scss/regular";
+@use "@fortawesome/fontawesome-free/scss/brands";
+@use "bootstrap/scss/bootstrap" as * with (
+    $primary: #0BCEAF,
+    $secondary: #6c757d,
+    $light: #ffffff,
+    $dark: #343a40,
+    $body-bg: #ffffff,
+    $body-color: #6c757d,
+    $headings-color: #343a40
+);
 
 /********** Template CSS ************/
 h1,
