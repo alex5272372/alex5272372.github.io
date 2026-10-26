@@ -21,8 +21,6 @@
     "webpack-dev-server": "^4.15.0"
   },
   "dependencies": {
-    "bootstrap": "^5.2.3",
-    "jquery": "^3.7.0",
-    "typed.js": "^2.0.16"
+    "bootstrap": "^5.2.3"
   }
 }

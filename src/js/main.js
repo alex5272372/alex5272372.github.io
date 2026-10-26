@@ -1,67 +1,91 @@
-// Import our custom CSS
 import '../scss/styles.scss'
 
-// Import all of Bootstrap's JS
-// import * as bootstrap from 'bootstrap'
+const initTypedText = () => {
+  const output = document.querySelector('.typed-text-output')
+  const source = document.querySelector('.typed-text')
 
-import $ from 'jquery'
-import Typed from 'typed.js'
+  if (!output || !source) return
 
-const main = () => {
-  $(window).on('scroll', () => {
-    const top = $(window).scrollTop()
+  const strings = source.textContent.split(',').map(text => text.trim()).filter(Boolean)
+  if (!strings.length) return
 
-    if (top > 100) {
-      $('.scroll-to-bottom').fadeOut('slow')
-      $('.back-to-top').fadeIn('slow')
-      $('.navbar').fadeIn('slow').css('display', 'flex')
-    } else {
-      $('.scroll-to-bottom').fadeIn('slow')
-      $('.back-to-top').fadeOut('slow')
-      $('.navbar').fadeOut('slow').css('display', 'none')
-    }
-
-    // Skills
-    if (top > 2000) {
-      $('.progress .progress-bar').each(function () {
-        $(this).css('width', $(this).attr('aria-valuenow') + '%')
-      })
-    }
-  })
-
-  // Smooth scrolling on the navbar links
-  $('.navbar-nav a').on('click', event => {
-    if (this.hash !== '') {
-      event.preventDefault()
-
-      $('html, body').animate({
-        scrollTop: $(this.hash).offset().top - 45
-      }, 1000, 'linear')
-
-      if ($(this).parents('.navbar-nav').length) {
-        $('.navbar-nav .active').removeClass('active')
-        $(this).closest('a').addClass('active')
-      }
-    }
-  })
-
-  // Typed Initiate
-  if ($('.typed-text-output').length == 1) {
-    const typed_strings = $('.typed-text').text()
-    new Typed('.typed-text-output', {
-      strings: typed_strings.split(', '),
-      typeSpeed: 100,
-      backSpeed: 20,
-      smartBackspace: false,
-      loop: true
-    })
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    output.textContent = strings[0]
+    return
   }
 
-  // Back to top button
-  $('.back-to-top').on('click', () => {
-    $('html, body').animate({ scrollTop: 0 }, 1000, 'linear')
-    return false
+  let stringIndex = 0
+  let characterIndex = 0
+  let deleting = false
+
+  const type = () => {
+    const currentString = strings[stringIndex]
+    output.textContent = currentString.slice(0, characterIndex)
+
+    let delay = deleting ? 20 : 100
+    if (!deleting && characterIndex === currentString.length) {
+      deleting = true
+      delay = 1000
+    } else if (deleting && characterIndex === 0) {
+      deleting = false
+      stringIndex = (stringIndex + 1) % strings.length
+      delay = 500
+    }
+
+    characterIndex += deleting ? -1 : 1
+    window.setTimeout(type, delay)
+  }
+
+  type()
+}
+
+const main = () => {
+  const navbar = document.querySelector('.navbar')
+  const scrollToBottom = document.querySelector('.scroll-to-bottom')
+  const backToTop = document.querySelector('.back-to-top')
+  const progressBars = document.querySelectorAll('.progress .progress-bar')
+
+  const updateScrollState = () => {
+    const isScrolled = window.scrollY > 100
+
+    if (scrollToBottom) scrollToBottom.style.display = isScrolled ? 'none' : ''
+    if (backToTop) backToTop.style.display = isScrolled ? 'block' : 'none'
+    if (navbar) navbar.style.display = isScrolled ? 'flex' : 'none'
+
+    if (window.scrollY > 2000) {
+      progressBars.forEach(progressBar => {
+        progressBar.style.width = `${progressBar.getAttribute('aria-valuenow')}%`
+      })
+    }
+  }
+
+  window.addEventListener('scroll', updateScrollState, { passive: true })
+  updateScrollState()
+
+  document.querySelectorAll('.navbar-nav a').forEach(link => {
+    link.addEventListener('click', event => {
+      const target = document.querySelector(link.getAttribute('href'))
+      if (!target) return
+
+      event.preventDefault()
+      window.scrollTo({
+        top: target.getBoundingClientRect().top + window.scrollY - 45,
+        behavior: 'smooth'
+      })
+
+      document.querySelectorAll('.navbar-nav .active').forEach(activeLink => {
+        activeLink.classList.remove('active')
+      })
+      link.classList.add('active')
+    })
   })
+
+  backToTop?.addEventListener('click', event => {
+    event.preventDefault()
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  })
+
+  initTypedText()
 }
 
 main()

@@ -131,9 +131,25 @@ h6,
     }
 }
 
-.typed-cursor {
+.typed-text-output::after {
+    content: "|";
+    display: inline-block;
+    margin-left: 2px;
     font-size: 45px;
     color: $light;
+    animation: typed-cursor-blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes typed-cursor-blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .typed-text-output::after {
+        animation: none;
+    }
 }
 
 .btn-play {
