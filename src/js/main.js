@@ -1,6 +1,6 @@
 import '../scss/styles.scss'
-import Collapse from 'bootstrap/js/dist/collapse'
-import ScrollSpy from 'bootstrap/js/dist/scrollspy'
+import Collapse from 'bootstrap/js/dist/collapse.js'
+import ScrollSpy from 'bootstrap/js/dist/scrollspy.js'
 
 const initTypedText = () => {
   const output = document.querySelector('.typed-text-output')

@@ -1,12 +1,10 @@
-'use strict'
+import path from 'node:path'
+import autoprefixer from 'autoprefixer'
+import ejs from 'ejs'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import templateData from './src/templateData.js'
 
-const path = require('path')
-const autoprefixer = require('autoprefixer')
-const ejs = require('ejs')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const templateData = require('./src/templateData')
-
-module.exports = {
+export default {
   mode: 'development',
   entry: './src/js/main.js',
   output: {

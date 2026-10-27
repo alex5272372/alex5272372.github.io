@@ -1,17 +1,20 @@
 [
   {
+    "state": "main",
     "title": "Master in Applied Mathematic",
     "institution": "Igor Sikorsky Kyiv Polytechnic Institute",
     "period": "2000 - 2006",
     "description": "Gained deep knowledge of mathematical methods for solving practical problems, techniques for modeling objects and processes. Studied a variety programming patterns and methods."
   },
   {
+    "state": "main",
     "title": "Bachelor in Computer Production",
     "institution": "Nizhyn Agrotechnical Institute",
     "period": "1994 - 1998",
     "description": "Studied microprocessor circuitry, automatic control systems and robotics. Gained knowledge of low-level programming languages, as well as embedded and system programming languages."
   },
   {
+    "state": "main",
     "title": "Full Stack Developer",
     "institution": "DAN.IT Education",
     "period": "2018 - 2020",

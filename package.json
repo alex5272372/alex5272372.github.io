@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "scripts": {
     "start": "webpack serve",
     "build": "webpack build --mode=production",

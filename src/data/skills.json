@@ -1,12 +1,12 @@
 [
   [
-    { "name": "HTML", "level": 95, "color": "primary" },
-    { "name": "CSS", "level": 85, "color": "warning" },
-    { "name": "Node.js", "level": 90, "color": "danger" }
+    { "state": "main", "name": "HTML", "level": 95, "color": "primary" },
+    { "state": "main", "name": "CSS", "level": 85, "color": "warning" },
+    { "state": "main", "name": "Node.js", "level": 90, "color": "danger" }
   ],
   [
-    { "name": "Javascript", "level": 90, "color": "danger" },
-    { "name": "React", "level": 75, "color": "dark" },
-    { "name": "SQL", "level": 85, "color": "info" }
+    { "state": "main", "name": "Javascript", "level": 90, "color": "danger" },
+    { "state": "main", "name": "React", "level": 75, "color": "dark" },
+    { "state": "main", "name": "SQL", "level": 85, "color": "info" }
   ]
 ]

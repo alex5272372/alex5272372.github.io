@@ -1,35 +1,41 @@
 [
   {
+    "state": "main",
     "name": "Hireterra",
     "category": "first",
     "image": "img/portfolio-1.png",
     "url": "https://hireterra.com/"
   },
   {
+    "state": "main",
     "name": "L'Oreal",
     "category": "second",
     "image": "img/portfolio-2.png",
     "url": "https://www.loreal.com/"
   },
   {
+    "state": "main",
     "name": "Shu Uemura",
     "category": "third",
     "image": "img/portfolio-3.png",
     "url": "https://www.shuuemura.com/"
   },
   {
+    "state": "main",
     "name": "Graphyte",
     "category": "first",
     "image": "img/portfolio-4.png",
     "url": "https://www.graphyte.com/"
   },
   {
+    "state": "main",
     "name": "IT Tutor",
     "category": "second",
     "image": "img/portfolio-5.png",
     "url": "https://www.it-tutor.ai/"
   },
   {
+    "state": "main",
     "name": "Epicentr",
     "category": "third",
     "image": "img/portfolio-6.png",
