@@ -1,8 +1,10 @@
 # Resume Workflow Prompts
 
-Use these on-demand prompts for resume-related work:
+Use the resume-building prompt for adding candidate evidence and tailoring this site's resume to a position. Resume content lives in `src/data/*.json`; every record has a `state` field. `main` records are rendered, and `draft` records are kept in the data but hidden. New evidence is added as `draft`. For a target position, promote only fact-supported, relevant records to `main` and move all other records to `draft`, without deleting them. Keep the shared `appState` in `src/templateData.js` set to `main` unless asked to change the rendering mechanism. Run `npm run build` after data changes.
 
-- [Resume Building](prompts/resume-building.prompt.md): guides a fact-only, interview-based resume workflow. Raw source answers belong in `sources/`, per-role evidence in `career/`, and polished narrative only in `master-resume.md`.
-- [Resume Review](prompts/resume-review.prompt.md): audits a supplied master resume for contradictions, ambiguity, evidence gaps, and interview risks without rewriting it.
+Use these on-demand prompts for focused resume work:
+
+- [Resume Building](prompts/resume-building.prompt.md): adds supplied resume/profile facts as hidden draft records, then selects state-tagged content for a target position.
+- [Resume Review](prompts/resume-review.prompt.md): audits a supplied resume for contradictions, ambiguity, evidence gaps, and interview risks without rewriting it.
 
 These are focused prompts, not general project instructions. Invoke the relevant prompt when starting that workflow.

@@ -94,56 +94,38 @@
             >
           </div>
           <div class="col-lg-7">
-            <h3 class="mb-4">Full Stack Developer & Web Developer</h3>
-            <p>To succeed in an environment of growth and excellence and earn a job that provides me job Satisfaction
-              and self-development and helps me achieve personal as well as organization goals. I want to work in an
-              environment, which provides more avenues in the fields of software engineering. I want to obtain a
-              position of responsibility that utilizes my skills and experience and am keen to work in an environment
-              where I can enrich my knowledge. My goal is to become associated with a company where I can utilize
-              my skills and gain further experience while enhancing the company’s productivity and reputation.
-            </p>
+            <% if (summary.length) { %>
+            <h3 class="mb-4"><%= summary[0].title %></h3>
+            <p><%= summary[0].description %></p>
+            <% } %>
+            <% if (contact.length) { %>
             <div class="row mb-3">
               <div class="col-sm-6 py-2">
-                <h6>
-                  Name: <span class="text-secondary">Oleksii Nikolaienko</span>
-                </h6>
+                <h6>Name: <span class="text-secondary"><%= contact[0].name %></span></h6>
               </div>
               <div class="col-sm-6 py-2">
-                <h6>
-                  Birthday: <span class="text-secondary">3 November 1979</span>
-                </h6>
+                <h6>Birthday: <span class="text-secondary"><%= contact[0].birthday %></span></h6>
               </div>
               <div class="col-sm-6 py-2">
-                <h6>
-                  Degree: <span class="text-secondary">Master</span>
-                </h6>
+                <h6>Degree: <span class="text-secondary"><%= contact[0].degree %></span></h6>
               </div>
               <div class="col-sm-6 py-2">
-                <h6>
-                  Experience: <span class="text-secondary">30 Years</span>
-                </h6>
+                <h6>Experience: <span class="text-secondary"><%= contact[0].experience %></span></h6>
               </div>
               <div class="col-sm-6 py-2">
-                <h6>
-                  Phone: <span class="text-secondary">+380 67 527 2372, +359 89 685 9583</span>
-                </h6>
+                <h6>Phone: <span class="text-secondary"><%= contact[0].phone %></span></h6>
               </div>
               <div class="col-sm-6 py-2">
-                <h6>
-                  Email: <a href="mailto:alex5272372@gmail.com" class="text-secondary">alex5272372@gmail.com</a>
-                </h6>
+                <h6>Email: <a href="mailto:<%= contact[0].email %>" class="text-secondary"><%= contact[0].email %></a></h6>
               </div>
               <div class="col-sm-6 py-2">
-                <h6>
-                  Address: <span class="text-secondary">Burgas, Bulgaria</span>
-                </h6>
+                <h6>Address: <span class="text-secondary"><%= contact[0].address %></span></h6>
               </div>
               <div class="col-sm-6 py-2">
-                <h6>
-                  Employment options: <span class="text-secondary">Remote work, Office</span>
-                </h6>
+                <h6>Employment options: <span class="text-secondary"><%= contact[0].employmentOptions %></span></h6>
               </div>
             </div>
+            <% } %>
           </div>
         </div>
       </div>
