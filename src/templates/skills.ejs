@@ -1,0 +1,23 @@
+<div class="row align-items-center">
+  <% skills.forEach(column => { %>
+  <div class="col-md-6">
+    <% column.forEach(skill => { %>
+    <div class="skill mb-4">
+      <div class="d-flex justify-content-between">
+        <h6 class="font-weight-bold"><%= skill.name %></h6>
+        <h6 class="font-weight-bold"><%= skill.level %>%</h6>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar bg-<%= skill.color %>"
+          role="progressbar"
+          aria-valuenow="<%= skill.level %>"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+  <% }) %>
+</div>

@@ -2,7 +2,9 @@
 
 const path = require('path')
 const autoprefixer = require('autoprefixer')
+const ejs = require('ejs')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const templateData = require('./src/templateData')
 
 module.exports = {
   mode: 'development',
@@ -17,7 +19,7 @@ module.exports = {
     hot: true
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.html' })
+    new HtmlWebpackPlugin({ template: './src/index.ejs' })
   ],
   module: {
     rules: [
@@ -45,18 +47,23 @@ module.exports = {
         ]
       },
       {
-        test: /\.html$/i,
+        test: /\.(ejs|html)$/i,
         loader: 'html-loader',
-        options: { sources: { list: [
-          '...',
-          {
-            tag: 'a',
-            attribute: 'href',
-            type: 'src',
-            filter: (tag, attribute, attributes) =>
-              /\.(pdf)$/i.test(attributes.find(el => el.name === 'href').value)
-          }
-        ] }}
+        options: {
+          preprocessor: (content, loaderContext) => ejs.render(content, templateData, {
+            filename: loaderContext.resourcePath
+          }),
+          sources: { list: [
+            '...',
+            {
+              tag: 'a',
+              attribute: 'href',
+              type: 'src',
+              filter: (tag, attribute, attributes) =>
+                /\.(pdf)$/i.test(attributes.find(el => el.name === 'href').value)
+            }
+          ] }
+        }
       },
       {
         test: /\.(png|jpg)$/i,

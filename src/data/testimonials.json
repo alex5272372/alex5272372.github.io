@@ -1,0 +1,20 @@
+[
+  {
+    "quote": "Had experience working with Oleksii in the development team at Epicentr LLC. We all worked as developers of E-Commerce ERP systems. Oleksii successfully worked on data exchanges via SQL and RabbitMQ, payroll calculation block, scaling and optimization of ERP systems, warehouse accounting (WMS) and accounting. I could recommend him as a good professional who has extensive experience in various fields.",
+    "image": "img/testimonial-1.jpg",
+    "name": "Oleksandr Cherniaiev",
+    "profession": "1C:Enterprise Developer"
+  },
+  {
+    "quote": "Oleksii is an excellent specialist with fairly strong knowledge of web technologies and development skills. He is well versed in the business process and fully understands the operating principles of such systems as Payroll and HR. Having extensive experience in development and good qualities for working in a team, you can easily take on large and difficult projects with him.",
+    "image": "img/testimonial-2.jpg",
+    "name": "Alexsandar Shevrikuko",
+    "profession": "Manager"
+  },
+  {
+    "quote": "Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita",
+    "image": "img/testimonial-3.jpg",
+    "name": "Client Name",
+    "profession": "Profession"
+  }
+]
