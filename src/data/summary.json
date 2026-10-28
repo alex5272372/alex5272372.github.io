@@ -1,6 +1,16 @@
 [
 	{
 		"state": "draft",
+		"title": "Lead 1C Programmer",
+		"description": "Seeking professional growth and the opportunity to strengthen programming knowledge, skills, and practices."
+	},
+	{
+		"state": "draft",
+		"title": "Full Stack JavaScript Developer",
+		"description": "Seeking a Full Stack Developer position on a team of professionals. Interested in expanding web and software development experience, increasing knowledge, and solving a variety of challenges."
+	},
+	{
+		"state": "draft",
 		"title": "Software Development Engineer",
 		"description": "Result-driven Software Development Engineer with over 10 years of experience delivering high-quality solutions across payroll and HR, e-commerce, and enterprise systems. Skilled in TypeScript, C#, Node.js, React.js, cloud services, database optimization, and integrations. Collaborative problem-solver focused on performance and scalability."
 	},

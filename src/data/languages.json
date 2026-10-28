@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "state": "main",
+    "name": "Ukrainian",
+    "level": "Fluent"
+  },
+  {
+    "state": "main",
+    "name": "Russian",
+    "level": "Fluent"
+  },
+  {
+    "state": "main",
+    "name": "English",
+    "level": "B2"
+  },
+  {
+    "state": "main",
+    "name": "Bulgarian",
+    "level": "B2"
+  }
+]

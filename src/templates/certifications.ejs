@@ -7,8 +7,11 @@
       <h5 class="font-weight-bold mb-1"><%= item.title %></h5>
       <p class="mb-2">
         <strong><%= item.institution %></strong>
-        <% if (item.period) { %>| <small><%= item.period %></small><% } %>
+        <% if (item.startDate || item.endDate) { %>| <small><%= formatDate(item.startDate) %><% if (item.endDate && item.endDate !== item.startDate) { %> - <%= formatDate(item.endDate) %><% } %></small><% } %>
       </p>
+      <% if (item.url) { %>
+      <p><a href="<%= item.url %>">View certificate</a></p>
+      <% } %>
       <% if (item.description) { %>
       <p><%= item.description %></p>
       <% } %>

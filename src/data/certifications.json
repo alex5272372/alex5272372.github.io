@@ -1,9 +1,35 @@
 [
   {
     "state": "draft",
+    "title": "1C:Professional - Platform 8.2 (Certificate PP880042171)",
+    "institution": "1C",
+    "startDate": "2010-05-15",
+    "endDate": "2010-05-15",
+    "description": ""
+  },
+  {
+    "state": "draft",
+    "title": "1C:Specialist - Platform 8.2 (Certificate CS081588)",
+    "institution": "1C",
+    "startDate": "2010-10-23",
+    "endDate": "2010-10-23",
+    "description": ""
+  },
+  {
+    "state": "draft",
+    "title": "1C:Professional - Accounting for Ukraine (Certificate PBU80002638)",
+    "institution": "1C",
+    "startDate": "2011-01-13",
+    "endDate": "2011-01-13",
+    "description": ""
+  },
+  {
+    "state": "draft",
     "title": "Full Stack Developer",
     "institution": "DAN.IT Education",
-    "period": "2018 - 2020",
+    "startDate": "2018-01-01",
+    "endDate": "2020-01-01",
+    "url": "https://dan-it.com.ua/certificates/full-stack/nikolaenko-oleksii/",
     "description": ""
   }
 ]

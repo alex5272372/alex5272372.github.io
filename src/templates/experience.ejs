@@ -6,10 +6,22 @@
       <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
       <h5 class="font-weight-bold mb-1"><%= item.title %></h5>
       <p class="mb-2">
-        <strong><%= item.company %></strong>
-        | <small><%= item.period %></small>
+        <strong>
+          <% if (item.url) { %>
+          <a href="<%= item.url %>"><%= item.company %></a>
+          <% } else { %>
+          <%= item.company %>
+          <% } %>
+        </strong>
+        <% if (item.startDate || item.endDate) { %>| <small><%= formatDate(item.startDate) %><% if (item.endDate && item.endDate !== item.startDate) { %> - <%= formatDate(item.endDate) %><% } else if (item.ongoing) { %> - Present<% } %></small><% } %>
       </p>
-      <p><%= item.description %></p>
+      <% if (item.responsibilities.length) { %>
+      <ul>
+        <% item.responsibilities.forEach(responsibility => { %>
+        <li><%= responsibility %></li>
+        <% }) %>
+      </ul>
+      <% } %>
     </div>
     <% }) %>
   </div>

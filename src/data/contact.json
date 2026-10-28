@@ -1,20 +1,62 @@
 [
-	{
-		"state": "draft",
-		"name": "Oleksii Nikolaienko",
-		"email": "alex5272372@gmail.com",
-		"website": "https://alex5272372.github.io",
-		"linkedin": "https://linkedin.com/in/oleksii-nikolaienko"
-	},
-	{
-		"state": "main",
-		"name": "Oleksii Nikolaienko",
-		"birthday": "3 November 1979",
-		"degree": "Master",
-		"experience": "30 Years",
-		"phone": "+380 67 527 2372, +359 89 685 9583",
-		"email": "alex5272372@gmail.com",
-		"address": "Burgas, Bulgaria",
-		"employmentOptions": "Remote work, Office"
-	}
+  {
+    "state": "draft",
+    "type": "address",
+    "value": "12A Drahomanova Street, Apt. 10, Kyiv"
+  },
+  {
+    "state": "main",
+    "type": "address",
+    "value": "Burgas, Bulgaria"
+  },
+  {
+    "state": "main",
+    "type": "birthday",
+    "value": "1979-11-03"
+  },
+  {
+    "state": "main",
+    "type": "degree",
+    "value": "Master"
+  },
+  {
+    "state": "draft",
+    "type": "email",
+    "value": "nikolal@ukr.net"
+  },
+  {
+    "state": "main",
+    "type": "email",
+    "value": "alex5272372@gmail.com"
+  },
+  {
+    "state": "draft",
+    "type": "employmentOptions",
+    "value": "Full-time"
+  },
+  {
+    "state": "main",
+    "type": "employmentOptions",
+    "value": "Remote work, Office"
+  },
+  {
+    "state": "main",
+    "type": "experience",
+    "value": "30 Years"
+  },
+  {
+    "state": "main",
+    "type": "name",
+    "value": "Oleksii Nikolaienko"
+  },
+  {
+    "state": "main",
+    "type": "phone",
+    "value": "+380675272372, +359896859583"
+  },
+  {
+    "state": "draft",
+    "type": "salaryExpectation",
+    "value": "Monthly; UAH 37,900"
+  }
 ]

@@ -1,30 +1,34 @@
 [
   {
-    "state": "draft",
-    "title": "Master's Degree in Applied Mathematics",
-    "institution": "Igor Sikorsky Kyiv Polytechnic Institute",
-    "period": "2000 - 2006",
-    "description": ""
+    "state": "main",
+    "title": "Bachelor in Computer Production",
+    "institution": "Nizhyn Agrotechnical Institute",
+    "startDate": "1994-09-01",
+    "endDate": "1998-06-30",
+    "description": "Studied microprocessor circuitry, automatic control systems and robotics. Gained knowledge of low-level programming languages, as well as embedded and system programming languages."
+  },
+  {
+    "state": "main",
+    "title": "Military Service",
+    "institution": "Main Directorate of the National Guard of Ukraine",
+    "startDate": "1998-12-07",
+    "endDate": "2000-04-30",
+    "description": "Completed military service with the Main Directorate of the National Guard of Ukraine."
   },
   {
     "state": "main",
     "title": "Master in Applied Mathematic",
     "institution": "Igor Sikorsky Kyiv Polytechnic Institute",
-    "period": "2000 - 2006",
+    "startDate": "2000-09-01",
+    "endDate": "2006-06-30",
     "description": "Gained deep knowledge of mathematical methods for solving practical problems, techniques for modeling objects and processes. Studied a variety programming patterns and methods."
-  },
-  {
-    "state": "main",
-    "title": "Bachelor in Computer Production",
-    "institution": "Nizhyn Agrotechnical Institute",
-    "period": "1994 - 1998",
-    "description": "Studied microprocessor circuitry, automatic control systems and robotics. Gained knowledge of low-level programming languages, as well as embedded and system programming languages."
   },
   {
     "state": "main",
     "title": "Full Stack Developer",
     "institution": "DAN.IT Education",
-    "period": "2018 - 2020",
+    "startDate": "2018-01-01",
+    "endDate": "2020-01-01",
     "description": "The course is based on original materials adapting the Israeli Telem methodology, latest JavaScript Client technologies (Frontend) and Java Server technologies (Backend), Soft Skills intensive, and real projects practice."
   }
 ]

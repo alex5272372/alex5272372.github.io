@@ -33,7 +33,7 @@
           <% if (summary.length || contact.length) { %>
           <a href="#about" class="nav-item nav-link">About</a>
           <% } %>
-          <% if (education.length || experience.length || certifications.length) { %>
+          <% if (education.length || experience.length || certifications.length || training.length) { %>
           <a href="#qualification" class="nav-item nav-link">Quality</a>
           <% } %>
           <% if (skills.some(column => column.length)) { %>
@@ -111,54 +111,21 @@
             <% } %>
             <% if (contact.length) { %>
             <div class="row mb-3">
+              <% contact.forEach(item => { %>
               <div class="col-sm-6 py-2">
-                <h6>Name: <span class="text-secondary"><%= contact[0].name %></span></h6>
+                <h6><%= item.type.replace(/([A-Z])/g, ' $1').replace(/^./, letter => letter.toUpperCase()) %>:
+                  <% if (item.type === 'email') { %>
+                  <a href="mailto:<%= item.value %>" class="text-secondary"><%= item.value %></a>
+                  <% } else if (item.type === 'website' || item.type === 'linkedin') { %>
+                  <a href="<%= item.value %>" class="text-secondary"><%= item.value %></a>
+                  <% } else if (item.type === 'birthday') { %>
+                  <span class="text-secondary"><%= formatDate(item.value) %></span>
+                  <% } else { %>
+                  <span class="text-secondary"><%= item.value %></span>
+                  <% } %>
+                </h6>
               </div>
-              <% if (contact[0].birthday) { %>
-              <div class="col-sm-6 py-2">
-                <h6>Birthday: <span class="text-secondary"><%= contact[0].birthday %></span></h6>
-              </div>
-              <% } %>
-              <% if (contact[0].degree) { %>
-              <div class="col-sm-6 py-2">
-                <h6>Degree: <span class="text-secondary"><%= contact[0].degree %></span></h6>
-              </div>
-              <% } %>
-              <% if (contact[0].experience) { %>
-              <div class="col-sm-6 py-2">
-                <h6>Experience: <span class="text-secondary"><%= contact[0].experience %></span></h6>
-              </div>
-              <% } %>
-              <% if (contact[0].phone) { %>
-              <div class="col-sm-6 py-2">
-                <h6>Phone: <span class="text-secondary"><%= contact[0].phone %></span></h6>
-              </div>
-              <% } %>
-              <% if (contact[0].email) { %>
-              <div class="col-sm-6 py-2">
-                <h6>Email: <a href="mailto:<%= contact[0].email %>" class="text-secondary"><%= contact[0].email %></a></h6>
-              </div>
-              <% } %>
-              <% if (contact[0].website) { %>
-              <div class="col-sm-6 py-2">
-                <h6>Website: <a href="<%= contact[0].website %>" class="text-secondary"><%= contact[0].website %></a></h6>
-              </div>
-              <% } %>
-              <% if (contact[0].linkedin) { %>
-              <div class="col-sm-6 py-2">
-                <h6>LinkedIn: <a href="<%= contact[0].linkedin %>" class="text-secondary"><%= contact[0].linkedin %></a></h6>
-              </div>
-              <% } %>
-              <% if (contact[0].address) { %>
-              <div class="col-sm-6 py-2">
-                <h6>Address: <span class="text-secondary"><%= contact[0].address %></span></h6>
-              </div>
-              <% } %>
-              <% if (contact[0].employmentOptions) { %>
-              <div class="col-sm-6 py-2">
-                <h6>Employment options: <span class="text-secondary"><%= contact[0].employmentOptions %></span></h6>
-              </div>
-              <% } %>
+              <% }) %>
             </div>
             <% } %>
           </div>
@@ -169,12 +136,12 @@
     <!-- About End -->
 
     <!-- Qualification Start -->
-    <% if (education.length || experience.length || certifications.length) { %>
+    <% if (education.length || experience.length || certifications.length || training.length) { %>
     <div class="container-fluid py-5" id="qualification">
       <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center">
           <h2 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h2>
-          <h2 class="position-absolute text-uppercase text-primary">Education & Expericence</h2>
+          <h2 class="position-absolute text-uppercase text-primary">Education & Experience</h2>
         </div>
         <div class="row align-items-center">
           <% if (education.length) { %>
@@ -187,6 +154,11 @@
         <% if (certifications.length) { %>
         <div class="row align-items-center mt-4">
           <%- include('templates/certifications.ejs') %>
+        </div>
+        <% } %>
+        <% if (training.length) { %>
+        <div class="row align-items-center mt-4">
+          <%- include('templates/training.ejs') %>
         </div>
         <% } %>
       </div>

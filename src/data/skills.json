@@ -1,8 +1,12 @@
 [
   [
+    { "state": "draft", "name": "1C:Enterprise: Platforms 7.7-8.3; Ukrainian configurations (UNF, Accounting, Payroll and HR Management, Trade Management, Trade Management for Ukraine, Manufacturing Enterprise Management, Document Management); Russian configurations (Enterprise Accounting, Complex Automation, alcohol trade automation); industry configurations (warehouse management, motor transport management, transport logistics and forwarding)" },
+    { "state": "draft", "name": "1C tools and libraries: Data Conversion, Performance Management Center, Test Center, Scenario Testing; Standard Subsystems Library, Connected Equipment Library, 1C:Document Management Integration Library" },
+    { "state": "draft", "name": "SAP: SAP R/3 Human Resources module configuration" },
+    { "state": "draft", "name": "Databases and technologies: Lotus Notes database development, MS SQL Server, 1C HTTP services, distributed information systems, TXT/XML/DBF data exchange, OLE" },
     { "state": "draft", "name": "Programming languages: TypeScript, JavaScript, Java, C#" },
-    { "state": "draft", "name": "Frameworks & tools: Node.js, React.js, REST, GraphQL, WebSocket, .NET, webpack, RabbitMQ" },
-    { "state": "draft", "name": "Cloud: AWS (RDS, EC2, Amplify, S3, load balancers, Route 53, IAM, CloudWatch); Azure (virtual machines, storage accounts, Key Vault)" },
+    { "state": "draft", "name": "Frameworks & tools: Node.js, React.js, Express, Redux, REST, GraphQL, WebSocket, .NET, webpack, RabbitMQ" },
+    { "state": "draft", "name": "Cloud: AWS (RDS, EC2, Amplify, S3, load balancers, Route 53, Lambda, IAM, CloudWatch); Azure (virtual machines, storage accounts, Key Vault)" },
     { "state": "draft", "name": "Architecture: Microservices, monolithic" },
     { "state": "draft", "name": "DBMS: MSSQL, PostgreSQL, Prisma, MongoDB, DynamoDB, Redis" },
     { "state": "main", "name": "HTML", "level": 95, "color": "primary" },
@@ -10,8 +14,11 @@
     { "state": "main", "name": "Node.js", "level": 90, "color": "danger" }
   ],
   [
+    { "state": "draft", "name": "Programming languages: 1C:Enterprise built-in language, JavaScript, C#" },
+    { "state": "draft", "name": "Languages: Ukrainian, Russian, technical English" },
+    { "state": "draft", "name": "Personal qualities: Punctuality, attention to detail, responsibility, systems thinking, communication skills" },
     { "state": "draft", "name": "Testing: Unit, integration, and end-to-end tests" },
-    { "state": "draft", "name": "DevOps: CI/CD, Docker, GitHub Actions, Linux" },
+    { "state": "draft", "name": "DevOps: CI/CD, Docker, GitHub Actions, Linux, Ubuntu, nginx, PM2" },
     { "state": "draft", "name": "Project management: Agile, Scrum, Kanban, Jira, Confluence, ClickUp" },
     { "state": "draft", "name": "Version control: Git, GitHub, Bitbucket, SVN" },
     { "state": "draft", "name": "Other: UML diagrams, Power BI, HTML, CSS3, Sass, BEM, 1C" },
