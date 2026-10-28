@@ -1,5 +1,12 @@
 [
 	{
+		"state": "draft",
+		"name": "Oleksii Nikolaienko",
+		"email": "alex5272372@gmail.com",
+		"website": "https://alex5272372.github.io",
+		"linkedin": "https://linkedin.com/in/oleksii-nikolaienko"
+	},
+	{
 		"state": "main",
 		"name": "Oleksii Nikolaienko",
 		"birthday": "3 November 1979",

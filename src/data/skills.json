@@ -1,10 +1,20 @@
 [
   [
+    { "state": "draft", "name": "Programming languages: TypeScript, JavaScript, Java, C#" },
+    { "state": "draft", "name": "Frameworks & tools: Node.js, React.js, REST, GraphQL, WebSocket, .NET, webpack, RabbitMQ" },
+    { "state": "draft", "name": "Cloud: AWS (RDS, EC2, Amplify, S3, load balancers, Route 53, IAM, CloudWatch); Azure (virtual machines, storage accounts, Key Vault)" },
+    { "state": "draft", "name": "Architecture: Microservices, monolithic" },
+    { "state": "draft", "name": "DBMS: MSSQL, PostgreSQL, Prisma, MongoDB, DynamoDB, Redis" },
     { "state": "main", "name": "HTML", "level": 95, "color": "primary" },
     { "state": "main", "name": "CSS", "level": 85, "color": "warning" },
     { "state": "main", "name": "Node.js", "level": 90, "color": "danger" }
   ],
   [
+    { "state": "draft", "name": "Testing: Unit, integration, and end-to-end tests" },
+    { "state": "draft", "name": "DevOps: CI/CD, Docker, GitHub Actions, Linux" },
+    { "state": "draft", "name": "Project management: Agile, Scrum, Kanban, Jira, Confluence, ClickUp" },
+    { "state": "draft", "name": "Version control: Git, GitHub, Bitbucket, SVN" },
+    { "state": "draft", "name": "Other: UML diagrams, Power BI, HTML, CSS3, Sass, BEM, 1C" },
     { "state": "main", "name": "Javascript", "level": 90, "color": "danger" },
     { "state": "main", "name": "React", "level": 75, "color": "dark" },
     { "state": "main", "name": "SQL", "level": 85, "color": "info" }

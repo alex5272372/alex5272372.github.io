@@ -30,11 +30,21 @@
       <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
         <div class="navbar-nav m-auto py-0">
           <a href="#home" class="nav-item nav-link active">Home</a>
+          <% if (summary.length || contact.length) { %>
           <a href="#about" class="nav-item nav-link">About</a>
+          <% } %>
+          <% if (education.length || experience.length || certifications.length) { %>
           <a href="#qualification" class="nav-item nav-link">Quality</a>
+          <% } %>
+          <% if (skills.some(column => column.length)) { %>
           <a href="#skill" class="nav-item nav-link">Skill</a>
+          <% } %>
+          <% if (projects.length) { %>
           <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+          <% } %>
+          <% if (testimonials.length) { %>
           <a href="#testimonial" class="nav-item nav-link">Review</a>
+          <% } %>
         </div>
         <a href="mailto:alex5272372@gmail.com" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
       </div>
@@ -79,6 +89,7 @@
     <!-- Header End -->
 
     <!-- About Start -->
+    <% if (summary.length || contact.length) { %>
     <div class="container-fluid py-5" id="about">
       <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center">
@@ -103,36 +114,62 @@
               <div class="col-sm-6 py-2">
                 <h6>Name: <span class="text-secondary"><%= contact[0].name %></span></h6>
               </div>
+              <% if (contact[0].birthday) { %>
               <div class="col-sm-6 py-2">
                 <h6>Birthday: <span class="text-secondary"><%= contact[0].birthday %></span></h6>
               </div>
+              <% } %>
+              <% if (contact[0].degree) { %>
               <div class="col-sm-6 py-2">
                 <h6>Degree: <span class="text-secondary"><%= contact[0].degree %></span></h6>
               </div>
+              <% } %>
+              <% if (contact[0].experience) { %>
               <div class="col-sm-6 py-2">
                 <h6>Experience: <span class="text-secondary"><%= contact[0].experience %></span></h6>
               </div>
+              <% } %>
+              <% if (contact[0].phone) { %>
               <div class="col-sm-6 py-2">
                 <h6>Phone: <span class="text-secondary"><%= contact[0].phone %></span></h6>
               </div>
+              <% } %>
+              <% if (contact[0].email) { %>
               <div class="col-sm-6 py-2">
                 <h6>Email: <a href="mailto:<%= contact[0].email %>" class="text-secondary"><%= contact[0].email %></a></h6>
               </div>
+              <% } %>
+              <% if (contact[0].website) { %>
+              <div class="col-sm-6 py-2">
+                <h6>Website: <a href="<%= contact[0].website %>" class="text-secondary"><%= contact[0].website %></a></h6>
+              </div>
+              <% } %>
+              <% if (contact[0].linkedin) { %>
+              <div class="col-sm-6 py-2">
+                <h6>LinkedIn: <a href="<%= contact[0].linkedin %>" class="text-secondary"><%= contact[0].linkedin %></a></h6>
+              </div>
+              <% } %>
+              <% if (contact[0].address) { %>
               <div class="col-sm-6 py-2">
                 <h6>Address: <span class="text-secondary"><%= contact[0].address %></span></h6>
               </div>
+              <% } %>
+              <% if (contact[0].employmentOptions) { %>
               <div class="col-sm-6 py-2">
                 <h6>Employment options: <span class="text-secondary"><%= contact[0].employmentOptions %></span></h6>
               </div>
+              <% } %>
             </div>
             <% } %>
           </div>
         </div>
       </div>
     </div>
+    <% } %>
     <!-- About End -->
 
     <!-- Qualification Start -->
+    <% if (education.length || experience.length || certifications.length) { %>
     <div class="container-fluid py-5" id="qualification">
       <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center">
@@ -140,14 +177,25 @@
           <h2 class="position-absolute text-uppercase text-primary">Education & Expericence</h2>
         </div>
         <div class="row align-items-center">
+          <% if (education.length) { %>
           <%- include('templates/education.ejs') %>
+          <% } %>
+          <% if (experience.length) { %>
           <%- include('templates/experience.ejs') %>
+          <% } %>
         </div>
+        <% if (certifications.length) { %>
+        <div class="row align-items-center mt-4">
+          <%- include('templates/certifications.ejs') %>
+        </div>
+        <% } %>
       </div>
     </div>
+    <% } %>
     <!-- Qualification End -->
 
     <!-- Skill Start -->
+    <% if (skills.some(column => column.length)) { %>
     <div class="container-fluid py-5" id="skill">
       <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center">
@@ -157,9 +205,11 @@
         <%- include('templates/skills.ejs') %>
       </div>
     </div>
+    <% } %>
     <!-- Skill End -->
 
     <!-- Portfolio Start -->
+    <% if (projects.length) { %>
     <div class="container-fluid pt-5 pb-3" id="portfolio">
       <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center">
@@ -171,9 +221,11 @@
         </div>
       </div>
     </div>
+    <% } %>
     <!-- Portfolio End -->
 
     <!-- Testimonial Start -->
+    <% if (testimonials.length) { %>
     <div class="container-fluid py-5" id="testimonial">
       <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center">
@@ -189,6 +241,7 @@
         </div>
       </div>
     </div>
+    <% } %>
     <!-- Testimonial End -->
 
     <!-- Footer Start -->

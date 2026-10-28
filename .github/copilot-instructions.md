@@ -4,7 +4,7 @@ Use the resume-building prompt for adding candidate evidence and tailoring this 
 
 Use these on-demand prompts for focused resume work:
 
-- [Resume Building](prompts/resume-building.prompt.md): adds supplied resume/profile facts as hidden draft records, then selects state-tagged content for a target position.
-- [Resume Review](prompts/resume-review.prompt.md): audits a supplied resume for contradictions, ambiguity, evidence gaps, and interview risks without rewriting it.
+- [Resume Building](.github/prompts/resume-building.prompt.md): adds supplied resume/profile facts as hidden draft records, then selects state-tagged content for a target position.
+- [Resume Review](.github/prompts/resume-review.prompt.md): audits a supplied resume for contradictions, ambiguity, evidence gaps, and interview risks without rewriting it.
 
-These are focused prompts, not general project instructions. Invoke the relevant prompt when starting that workflow.
+These are focused prompts, not general project instructions. Before starting a resume workflow, open the relevant prompt from `.github/prompts/` and follow it. Do not assume the prompt is missing based on the old `prompts/` path.
