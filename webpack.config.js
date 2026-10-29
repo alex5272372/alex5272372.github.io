@@ -17,7 +17,11 @@ export default {
     hot: true
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: './src/index.ejs' })
+    new HtmlWebpackPlugin({ template: './src/index.ejs' }),
+    new HtmlWebpackPlugin({
+      filename: 'print-resume.html',
+      template: './src/print-resume.ejs'
+    })
   ],
   module: {
     rules: [
@@ -51,16 +55,7 @@ export default {
           preprocessor: (content, loaderContext) => ejs.render(content, templateData, {
             filename: loaderContext.resourcePath
           }),
-          sources: { list: [
-            '...',
-            {
-              tag: 'a',
-              attribute: 'href',
-              type: 'src',
-              filter: (tag, attribute, attributes) =>
-                /\.(pdf)$/i.test(attributes.find(el => el.name === 'href').value)
-            }
-          ] }
+          sources: { list: ['...'] }
         }
       },
       {
@@ -73,11 +68,6 @@ export default {
         type: 'asset/resource',
         generator: { filename: '[name]-[hash][ext]' }
       },
-      {
-        test: /\.(pdf)$/i,
-        type: 'asset/resource',
-        generator: { filename: '[name]-[hash][ext]' }
-      }
     ]
   }
 }

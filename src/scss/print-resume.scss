@@ -1,0 +1,243 @@
+.print-resume-page {
+    --resume-accent: #ad4827;
+    margin: 0;
+    background: #eeeeee;
+    color: #292929;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    line-height: 1.28;
+}
+
+.print-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    width: min(210mm, 100%);
+    margin: 0 auto;
+    padding: 10px 12mm;
+    background: #ffffff;
+}
+
+.print-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+    border-radius: 3px;
+    padding: 9px 14px;
+    background: var(--resume-accent);
+    color: #ffffff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.resume-sheet {
+    box-sizing: border-box;
+    width: min(210mm, 100%);
+    min-height: 297mm;
+    margin: 18px auto;
+    border-top: 9mm solid var(--resume-accent);
+    border-bottom: 9mm solid var(--resume-accent);
+    padding: 7mm 12mm 10mm;
+    background: #ffffff;
+    box-shadow: 0 2px 18px rgb(0 0 0 / 12%);
+}
+
+.resume-header {
+    display: grid;
+    grid-template-columns: 40mm minmax(0, 1fr) 54mm;
+    align-items: center;
+    gap: 5mm;
+    padding-bottom: 5mm;
+}
+
+.resume-photo {
+    width: 38mm;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.resume-identity h1 {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 5mm;
+    color: #292929;
+    font-family: "Arial Narrow", Impact, sans-serif;
+    font-size: 30pt;
+    font-stretch: condensed;
+    font-weight: 400 !important;
+    line-height: 0.98;
+    text-transform: uppercase;
+}
+
+.resume-identity h1 strong {
+    color: var(--resume-accent);
+    font-weight: 400 !important;
+}
+
+.resume-target {
+    margin: 0;
+    font-size: 12pt;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.resume-contact {
+    margin: 0;
+    font-size: 9pt;
+    font-style: normal;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.resume-contact p {
+    margin: 0 0 3mm;
+}
+
+.resume-contact a,
+.resume-employer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.resume-section {
+    display: grid;
+    grid-template-columns: 40mm minmax(0, 1fr);
+    gap: 5mm;
+    margin-top: 2mm;
+}
+
+.resume-section-title {
+    margin: 0;
+    padding-top: 2mm;
+    color: #292929;
+    font-family: "Arial Narrow", Impact, sans-serif;
+    font-size: 17pt;
+    font-weight: 400 !important;
+    line-height: 1;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.resume-section-content {
+    min-width: 0;
+    border-top: 1.2mm solid var(--resume-accent);
+    padding: 2mm 0 1mm;
+}
+
+.resume-profile p,
+.resume-experience-item ul,
+.resume-education-item p {
+    margin: 0;
+}
+
+.resume-experience-item,
+.resume-education-item {
+    margin-bottom: 3mm;
+    break-inside: avoid;
+}
+
+.resume-experience-item h3,
+.resume-education-item h3 {
+    margin: 0 0 1mm;
+    color: var(--resume-accent);
+    font-size: 10pt;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.resume-employer {
+    margin: 0 0 1mm;
+    font-weight: 700;
+}
+
+.resume-dates {
+    white-space: nowrap;
+}
+
+.resume-experience-item ul {
+    padding-left: 5mm;
+}
+
+.resume-skill-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 8mm;
+    margin: 0;
+    padding-left: 5mm;
+}
+
+.resume-education-item p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1mm 4mm;
+}
+
+@media (max-width: 700px) {
+    .resume-sheet {
+        margin: 0 auto;
+        padding: 7mm 6mm 10mm;
+    }
+
+    .print-toolbar {
+        padding: 10px 6mm;
+    }
+
+    .resume-header {
+        grid-template-columns: 25mm minmax(0, 1fr);
+        gap: 3mm;
+    }
+
+    .resume-photo {
+        width: 24mm;
+    }
+
+    .resume-identity h1 {
+        font-size: 23pt;
+    }
+
+    .resume-contact {
+        grid-column: 2;
+        text-align: left;
+    }
+
+    .resume-section {
+        grid-template-columns: 25mm minmax(0, 1fr);
+        gap: 3mm;
+    }
+
+    .resume-section-title {
+        font-size: 13pt;
+    }
+
+    .resume-skill-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    .print-resume-page {
+        background: #ffffff;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .print-toolbar {
+        display: none;
+    }
+
+    .resume-sheet {
+        width: 210mm;
+        margin: 0;
+        box-shadow: none;
+    }
+}

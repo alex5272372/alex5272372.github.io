@@ -1,4 +1,5 @@
 import '../scss/styles.scss'
+import '../scss/print-resume.scss'
 import Collapse from 'bootstrap/js/dist/collapse.js'
 import ScrollSpy from 'bootstrap/js/dist/scrollspy.js'
 

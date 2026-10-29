@@ -1,0 +1,120 @@
+<%
+const fullName = contact.find(item => item.type === 'name')?.value || 'Oleksii Nikolaienko'
+const nameParts = fullName.trim().split(/\s+/)
+const printContacts = contact.filter(item => ['phone', 'email'].includes(item.type))
+%>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Printable resume for <%= fullName %>">
+    <title><%= fullName %> | Resume</title>
+  </head>
+  <body class="print-resume-page">
+    <div class="print-toolbar" role="toolbar" aria-label="Resume actions">
+      <button class="print-button" type="button" onclick="window.print()">
+        <i class="fas fa-print" aria-hidden="true"></i>
+        Print Resume
+      </button>
+    </div>
+    <main class="resume-sheet">
+      <header class="resume-header">
+        <img class="resume-photo" src="img/profile.png" alt="<%= fullName %>">
+        <div class="resume-identity">
+          <h1>
+            <span><%= nameParts[0] %></span>
+            <strong><%= nameParts.slice(1).join(' ') %></strong>
+          </h1>
+          <% if (summary.length) { %>
+          <p class="resume-target"><%= summary[0].title %></p>
+          <% } %>
+        </div>
+        <address class="resume-contact">
+          <% printContacts.forEach(item => { %>
+          <p>
+            <% if (item.type === 'email') { %>
+            <a href="mailto:<%= item.value %>"><%= item.value %></a>
+            <% } else { %>
+            <%= item.value %>
+            <% } %>
+          </p>
+          <% }) %>
+        </address>
+      </header>
+
+      <% if (summary.length) { %>
+      <section class="resume-section">
+        <h2 class="resume-section-title">Profile</h2>
+        <div class="resume-section-content resume-profile">
+          <p><%= summary[0].description %></p>
+        </div>
+      </section>
+      <% } %>
+
+      <% if (experience.length) { %>
+      <section class="resume-section resume-experience">
+        <h2 class="resume-section-title">Experience</h2>
+        <div class="resume-section-content">
+          <% experience.forEach(item => { %>
+          <article class="resume-experience-item">
+            <h3><%= item.title %></h3>
+            <p class="resume-employer">
+              <% if (item.url) { %>
+              <a href="<%= item.url %>"><%= item.company %></a>
+              <% } else { %>
+              <%= item.company %>
+              <% } %>
+              <span class="resume-dates">
+                <%= item.startDate.slice(0, 4) %> - <%= item.ongoing ? 'Present' : item.endDate.slice(0, 4) %>
+              </span>
+            </p>
+            <% if (item.responsibilities.length) { %>
+            <ul>
+              <% item.responsibilities.forEach(responsibility => { %>
+              <li><%= responsibility %></li>
+              <% }) %>
+            </ul>
+            <% } %>
+          </article>
+          <% }) %>
+        </div>
+      </section>
+      <% } %>
+
+      <% if (skills.some(column => column.length)) { %>
+      <section class="resume-section">
+        <h2 class="resume-section-title">Skills</h2>
+        <div class="resume-section-content">
+          <ul class="resume-skill-list">
+            <% skills.forEach(column => { %>
+            <% column.forEach(skill => { %>
+            <li><%= skill.name %></li>
+            <% }) %>
+            <% }) %>
+          </ul>
+        </div>
+      </section>
+      <% } %>
+
+      <% if (education.length) { %>
+      <section class="resume-section">
+        <h2 class="resume-section-title">Education</h2>
+        <div class="resume-section-content">
+          <% education.forEach(item => { %>
+          <article class="resume-education-item">
+            <h3><%= item.title %></h3>
+            <p>
+              <strong><%= item.institution %></strong>
+              <% if (item.startDate || item.endDate) { %>
+              <span class="resume-dates"><%= item.startDate.slice(0, 4) %> - <%= item.endDate.slice(0, 4) %></span>
+              <% } %>
+            </p>
+          </article>
+          <% }) %>
+        </div>
+      </section>
+      <% } %>
+    </main>
+  </body>
+</html>
