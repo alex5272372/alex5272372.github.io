@@ -2,10 +2,9 @@ import projects from './data/projects.json' with { type: 'json' }
 import education from './data/education.json' with { type: 'json' }
 import experience from './data/experience.json' with { type: 'json' }
 import skills from './data/skills.json' with { type: 'json' }
-import testimonials from './data/testimonials.json' with { type: 'json' }
+import recommendations from './data/recommendations.json' with { type: 'json' }
 import summary from './data/summary.json' with { type: 'json' }
 import contact from './data/contact.json' with { type: 'json' }
-import achievements from './data/achievements.json' with { type: 'json' }
 import certifications from './data/certifications.json' with { type: 'json' }
 import languages from './data/languages.json' with { type: 'json' }
 import training from './data/training.json' with { type: 'json' }
@@ -32,11 +31,10 @@ export default {
   projects: filterByState(projects),
   education: filterAndSortByStartDate(education),
   experience: filterAndSortByStartDate(experience),
-  skills: skills.map(filterByState),
-  testimonials: filterByState(testimonials),
+  skills: filterByState(skills),
+  recommendations: filterByState(recommendations),
   summary: filterByState(summary),
   contact: filterByState(contact),
-  achievements: filterByState(achievements),
   certifications: filterByState(certifications),
   languages: filterByState(languages),
   training: filterByState(training),

@@ -280,12 +280,12 @@ h6,
     left: 30px;
 }
 
-.testimonial-carousel .owl-dots {
+.recommendation-carousel .owl-dots {
     margin-top: 25px;
     text-align: center;
 }
 
-.testimonial-carousel .owl-dot {
+.recommendation-carousel .owl-dot {
     display: inline-block;
     margin: 0 5px;
     width: 12px;
@@ -294,6 +294,6 @@ h6,
     background: #dddddd;
 }
 
-.testimonial-carousel .owl-dot.active {
+.recommendation-carousel .owl-dot.active {
     background: $primary;
 }

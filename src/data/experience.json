@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "state": "draft",
     "title": "Computer Engineer",
     "company": "Bobrovytsia Professional College",
@@ -15,6 +16,7 @@
     ]
   },
   {
+    "id": 2,
     "state": "draft",
     "title": "Programmer",
     "company": "Ukrposhta",
@@ -29,6 +31,7 @@
     ]
   },
   {
+    "id": 3,
     "state": "draft",
     "title": "Programmer",
     "company": "Naftogaz of Ukraine",
@@ -43,6 +46,7 @@
     ]
   },
   {
+    "id": 4,
     "state": "draft",
     "title": "First-category technician",
     "company": "Ukrtelecom",
@@ -57,6 +61,7 @@
     ]
   },
   {
+    "id": 5,
     "state": "draft",
     "title": "Programmer",
     "company": "Viaduk-Telecom CJSC",
@@ -74,6 +79,7 @@
     ]
   },
   {
+    "id": 6,
     "state": "draft",
     "title": "Programmer",
     "company": "Yumis LLC (Soyuzagrokomplekt)",
@@ -90,6 +96,7 @@
     ]
   },
   {
+    "id": 7,
     "state": "draft",
     "title": "Programmer",
     "company": "Ukrprominvest Corporation",
@@ -106,6 +113,7 @@
     ]
   },
   {
+    "id": 8,
     "state": "draft",
     "title": "Programmer",
     "company": "Tulchinmyaso LLC",
@@ -122,6 +130,7 @@
     ]
   },
   {
+    "id": 9,
     "state": "draft",
     "title": "Application Programmer",
     "company": "UGMK",
@@ -142,6 +151,7 @@
     ]
   },
   {
+    "id": 10,
     "state": "draft",
     "title": "1C Freelancer",
     "company": "Freelance",
@@ -159,6 +169,7 @@
     ]
   },
   {
+    "id": 11,
     "state": "draft",
     "title": "Head of 1C Development",
     "company": "Compenta LLC",
@@ -176,6 +187,7 @@
     ]
   },
   {
+    "id": 12,
     "state": "draft",
     "title": "Lead Software Engineer",
     "company": "Mobilochka LLC",
@@ -192,6 +204,7 @@
     ]
   },
   {
+    "id": 13,
     "state": "draft",
     "title": "Software Engineer",
     "company": "Agromars Complex LLC",
@@ -204,6 +217,7 @@
     "technologies": []
   },
   {
+    "id": 14,
     "state": "draft",
     "title": "Software Engineer",
     "company": "Alcohol Traditions LLC",
@@ -222,6 +236,7 @@
     ]
   },
   {
+    "id": 15,
     "state": "draft",
     "title": "Lead Programmer",
     "company": "Imperial Group of Companies",
@@ -241,6 +256,7 @@
     ]
   },
   {
+    "id": 16,
     "state": "draft",
     "title": "Programmer",
     "company": "Socar Energy Ukraine",
@@ -259,6 +275,7 @@
     ]
   },
   {
+    "id": 17,
     "state": "draft",
     "title": "Programmer",
     "company": "Triumph Media Group",
@@ -276,6 +293,7 @@
     ]
   },
   {
+    "id": 18,
     "state": "draft",
     "title": "Software Developer",
     "company": "Epicentr K",
@@ -295,6 +313,7 @@
     ]
   },
   {
+    "id": 19,
     "state": "draft",
     "title": "Software Development Engineer",
     "company": "Astound Commerce",
@@ -319,6 +338,7 @@
     ]
   },
   {
+    "id": 20,
     "state": "main",
     "title": "Software Development Engineer",
     "company": "Intecracy Group",
@@ -342,6 +362,7 @@
     ]
   },
   {
+    "id": 21,
     "state": "main",
     "title": "Full Stack Developer",
     "company": "Svitla Systems",
@@ -371,6 +392,7 @@
     ]
   },
   {
+    "id": 22,
     "state": "main",
     "title": "Full-stack Software Development Engineer",
     "company": "Vialto Partners",
@@ -396,7 +418,8 @@
       "SQL"
     ]
   },
-    {
+  {
+    "id": 23,
     "state": "main",
     "title": "Full-stack Software Development Engineer",
     "company": "Trinetix",

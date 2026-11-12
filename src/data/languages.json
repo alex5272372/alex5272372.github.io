@@ -1,20 +1,24 @@
 [
   {
+    "id": 1,
     "state": "main",
     "name": "Ukrainian",
     "level": "Fluent"
   },
   {
+    "id": 2,
     "state": "main",
     "name": "Russian",
     "level": "Fluent"
   },
   {
+    "id": 3,
     "state": "main",
     "name": "English",
     "level": "B2"
   },
   {
+    "id": 4,
     "state": "main",
     "name": "Bulgarian",
     "level": "B2"

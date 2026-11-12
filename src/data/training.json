@@ -1,11 +1,13 @@
 [
   {
+    "id": 1,
     "state": "draft",
     "title": "Cost Calculation Algorithms in RAUZ Mode",
     "startDate": "2014-04-01",
     "description": "Training on cost calculation algorithms in RAUZ mode in 1C:Enterprise 8: Manufacturing Enterprise Management for Ukraine."
   },
   {
+    "id": 2,
     "state": "draft",
     "title": "SAP Courses",
     "startDate": "2008-06-01",
@@ -13,6 +15,7 @@
     "description": "ASAP implementation roadmap; HR organizational structure; organizational management; personnel management; time data management; payroll calculation."
   },
   {
+    "id": 3,
     "state": "draft",
     "title": "Accountant",
     "institution": "Perspektiva - XXI Century Specialized Training Center",

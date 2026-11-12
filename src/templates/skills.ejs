@@ -1,15 +1,17 @@
 <div class="row align-items-center">
-  <% skills.forEach(column => { %>
+  <%
+    const mid = Math.ceil(skills.length / 2);
+    const leftColumn = skills.slice(0, mid);
+    const rightColumn = skills.slice(mid);
+  %>
   <div class="col-md-6">
-    <% column.forEach(skill => { %>
+    <% leftColumn.forEach(skill => { %>
     <div class="skill mb-4">
+      <% if (skill.level != null) { %>
       <div class="d-flex justify-content-between">
         <h6 class="font-weight-bold"><%= skill.name %></h6>
-        <% if (skill.level != null) { %>
         <h6 class="font-weight-bold"><%= skill.level %>%</h6>
-        <% } %>
       </div>
-      <% if (skill.level != null) { %>
       <div class="progress">
         <div
           class="progress-bar bg-<%= skill.color %>"
@@ -19,9 +21,33 @@
           aria-valuemax="100"
         ></div>
       </div>
+      <% } else { %>
+      <h6 class="font-weight-bold"><%= skill.name %></h6>
       <% } %>
     </div>
     <% }) %>
   </div>
-  <% }) %>
+  <div class="col-md-6">
+    <% rightColumn.forEach(skill => { %>
+    <div class="skill mb-4">
+      <% if (skill.level != null) { %>
+      <div class="d-flex justify-content-between">
+        <h6 class="font-weight-bold"><%= skill.name %></h6>
+        <h6 class="font-weight-bold"><%= skill.level %>%</h6>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar bg-<%= skill.color %>"
+          role="progressbar"
+          aria-valuenow="<%= skill.level %>"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <% } else { %>
+      <h6 class="font-weight-bold"><%= skill.name %></h6>
+      <% } %>
+    </div>
+    <% }) %>
+  </div>
 </div>

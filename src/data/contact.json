@@ -1,60 +1,72 @@
 [
   {
+    "id": 1,
     "state": "draft",
     "type": "address",
     "value": "12A Drahomanova Street, Apt. 10, Kyiv"
   },
   {
+    "id": 2,
     "state": "main",
     "type": "address",
     "value": "Burgas, Bulgaria"
   },
   {
+    "id": 3,
     "state": "main",
     "type": "birthday",
     "value": "1979-11-03"
   },
   {
+    "id": 4,
     "state": "main",
     "type": "degree",
     "value": "Master"
   },
   {
+    "id": 5,
     "state": "draft",
     "type": "email",
     "value": "nikolal@ukr.net"
   },
   {
+    "id": 6,
     "state": "main",
     "type": "email",
     "value": "alex5272372@gmail.com"
   },
   {
+    "id": 7,
     "state": "draft",
     "type": "employmentOptions",
     "value": "Full-time"
   },
   {
+    "id": 8,
     "state": "main",
     "type": "employmentOptions",
     "value": "Remote work, Office"
   },
   {
+    "id": 9,
     "state": "main",
     "type": "experience",
     "value": "30 Years"
   },
   {
+    "id": 10,
     "state": "main",
     "type": "name",
     "value": "Oleksii Nikolaienko"
   },
   {
+    "id": 11,
     "state": "main",
     "type": "phone",
     "value": "+380675272372, +359896859583"
   },
   {
+    "id": 12,
     "state": "draft",
     "type": "salaryExpectation",
     "value": "Monthly; UAH 37,900"

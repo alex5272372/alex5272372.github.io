@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "state": "main",
     "name": "Hireterra",
     "category": "first",
@@ -7,6 +8,7 @@
     "url": "https://hireterra.com/"
   },
   {
+    "id": 2,
     "state": "main",
     "name": "L'Oreal",
     "category": "second",
@@ -14,6 +16,7 @@
     "url": "https://www.loreal.com/"
   },
   {
+    "id": 3,
     "state": "main",
     "name": "Shu Uemura",
     "category": "third",
@@ -21,6 +24,7 @@
     "url": "https://www.shuuemura.com/"
   },
   {
+    "id": 4,
     "state": "main",
     "name": "Graphyte",
     "category": "first",
@@ -28,6 +32,7 @@
     "url": "https://www.graphyte.com/"
   },
   {
+    "id": 5,
     "state": "main",
     "name": "IT Tutor",
     "category": "second",
@@ -35,6 +40,7 @@
     "url": "https://www.it-tutor.ai/"
   },
   {
+    "id": 6,
     "state": "main",
     "name": "Epicentr",
     "category": "third",

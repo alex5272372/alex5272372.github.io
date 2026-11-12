@@ -1,22 +1,32 @@
 [
 	{
+		"id": 1,
 		"state": "draft",
 		"title": "Lead 1C Programmer",
 		"description": "Seeking professional growth and the opportunity to strengthen programming knowledge, skills, and practices."
 	},
 	{
+		"id": 2,
 		"state": "draft",
 		"title": "Full Stack JavaScript Developer",
 		"description": "Seeking a Full Stack Developer position on a team of professionals. Interested in expanding web and software development experience, increasing knowledge, and solving a variety of challenges."
 	},
 	{
+		"id": 3,
 		"state": "draft",
 		"title": "Software Development Engineer",
 		"description": "Result-driven Software Development Engineer with over 10 years of experience delivering high-quality solutions across payroll and HR, e-commerce, and enterprise systems. Skilled in TypeScript, C#, Node.js, React.js, cloud services, database optimization, and integrations. Collaborative problem-solver focused on performance and scalability."
 	},
 	{
+		"id": 4,
 		"state": "main",
 		"title": "Full Stack Developer & Web Developer",
-		"description": "To succeed in an environment of growth and excellence and earn a job that provides me job Satisfaction and self-development and helps me achieve personal as well as organization goals. I want to work in an environment, which provides more avenues in the fields of software engineering. I want to obtain a position of responsibility that utilizes my skills and experience and am keen to work in an environment where I can enrich my knowledge. My goal is to become associated with a company where I can utilize my skills and gain further experience while enhancing the company’s productivity and reputation."
+		"description": "To succeed in an environment of growth and excellence and earn a job that provides me job Satisfaction and self-development and helps me achieve personal as well as organization goals. I want to work in an environment, which provides more avenues in the fields of software engineering. I want to obtain a position of responsibility that utilizes my skills and experience and am keen to work in an environment where I can enrich my knowledge. My goal is to become associated with a company where I can utilize my skills and gain further experience while enhancing the company's productivity and reputation."
+	},
+	{
+		"id": 5,
+		"state": "draft",
+		"title": "Full Stack Developer",
+		"description": "Ever since I was a little kid, software development has been my passion. For 30 years, I discover something new every day. As a result, I got something more than just skills. It is the ability to quickly learn new technologies. I`m looking for position of Web Developer to become part of a team of professionals and positive people. I want to increase my knowledge and enhance experience in web development. In the future, I want to expand the experience in the field of software development, solution of various challenges."
 	}
 ]

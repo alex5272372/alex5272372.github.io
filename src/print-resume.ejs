@@ -82,15 +82,13 @@ const printContacts = contact.filter(item => ['phone', 'email'].includes(item.ty
       </section>
       <% } %>
 
-      <% if (skills.some(column => column.length)) { %>
+      <% if (skills.length) { %>
       <section class="resume-section">
         <h2 class="resume-section-title">Skills</h2>
         <div class="resume-section-content">
           <ul class="resume-skill-list">
-            <% skills.forEach(column => { %>
-            <% column.forEach(skill => { %>
+            <% skills.forEach(skill => { %>
             <li><%= skill.name %></li>
-            <% }) %>
             <% }) %>
           </ul>
         </div>

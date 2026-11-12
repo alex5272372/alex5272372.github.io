@@ -36,14 +36,14 @@
           <% if (education.length || experience.length || certifications.length || training.length) { %>
           <a href="#qualification" class="nav-item nav-link">Quality</a>
           <% } %>
-          <% if (skills.some(column => column.length)) { %>
+          <% if (skills.length) { %>
           <a href="#skill" class="nav-item nav-link">Skill</a>
           <% } %>
           <% if (projects.length) { %>
           <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
           <% } %>
-          <% if (testimonials.length) { %>
-          <a href="#testimonial" class="nav-item nav-link">Review</a>
+          <% if (recommendations.length) { %>
+          <a href="#recommendations" class="nav-item nav-link">Recommendations</a>
           <% } %>
         </div>
         <a href="mailto:alex5272372@gmail.com" class="btn btn-outline-primary d-none d-lg-block">Hire Me</a>
@@ -167,7 +167,7 @@
     <!-- Qualification End -->
 
     <!-- Skill Start -->
-    <% if (skills.some(column => column.length)) { %>
+    <% if (skills.length) { %>
     <div class="container-fluid py-5" id="skill">
       <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center">
@@ -196,25 +196,25 @@
     <% } %>
     <!-- Portfolio End -->
 
-    <!-- Testimonial Start -->
-    <% if (testimonials.length) { %>
-    <div class="container-fluid py-5" id="testimonial">
+    <!-- Recommendations Start -->
+    <% if (recommendations.length) { %>
+    <div class="container-fluid py-5" id="recommendations">
       <div class="container">
         <div class="position-relative d-flex align-items-center justify-content-center">
-          <h2 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Review</h2>
+          <h2 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Recommendations</h2>
           <h2 class="position-absolute text-uppercase text-primary">People Say</h2>
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-8">
-            <div class="owl-carousel testimonial-carousel">
-              <%- include('templates/testimonials.ejs') %>
+            <div class="owl-carousel recommendation-carousel">
+              <%- include('templates/recommendations.ejs') %>
             </div>
           </div>
         </div>
       </div>
     </div>
     <% } %>
-    <!-- Testimonial End -->
+    <!-- Recommendations End -->
 
     <!-- Footer Start -->
     <div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">

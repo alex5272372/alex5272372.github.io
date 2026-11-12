@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "state": "main",
     "title": "Bachelor in Computer Production",
     "institution": "Nizhyn Agrotechnical Institute",
@@ -8,6 +9,7 @@
     "description": "Studied microprocessor circuitry, automatic control systems and robotics. Gained knowledge of low-level programming languages, as well as embedded and system programming languages."
   },
   {
+    "id": 2,
     "state": "main",
     "title": "Military Service",
     "institution": "Main Directorate of the National Guard of Ukraine",
@@ -16,6 +18,7 @@
     "description": "Completed military service with the Main Directorate of the National Guard of Ukraine."
   },
   {
+    "id": 3,
     "state": "main",
     "title": "Master in Applied Mathematic",
     "institution": "Igor Sikorsky Kyiv Polytechnic Institute",
@@ -24,6 +27,7 @@
     "description": "Gained deep knowledge of mathematical methods for solving practical problems, techniques for modeling objects and processes. Studied a variety programming patterns and methods."
   },
   {
+    "id": 4,
     "state": "main",
     "title": "Full Stack Developer",
     "institution": "DAN.IT Education",

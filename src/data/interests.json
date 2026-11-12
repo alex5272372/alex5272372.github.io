@@ -1,10 +1,12 @@
 [
   {
+    "id": 1,
     "state": "main",
     "title": "E-bikes",
     "description": "I enjoy exploring on an e-bike and discovering new routes. It combines outdoor activity with the freedom to travel farther."
   },
   {
+    "id": 2,
     "state": "main",
     "title": "Hiking",
     "description": "I enjoy spending time outdoors and exploring trails on foot. Hiking is a great way to discover new places and enjoy nature."
